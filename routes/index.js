@@ -7,7 +7,7 @@ const
     , router = express.Router()
     , azureStorage = require('azure-storage')
     , blobService = azureStorage.createBlobService()
-    , containerName = 'thumbnails'
+    , containerName = 'images'
     , config = require('../config')
 ;
 
@@ -31,14 +31,14 @@ router.get('/', (req, res, next) => {
     } else {
 
       viewData = {
-        title: 'Home',
+        title: 'Image Analyzer',
         viewName: 'index',
         accountName: config.getStorageAccountName(),
         containerName: containerName
       };
 
       if (data.entries.length) {
-        viewData.thumbnails = data.entries;
+        viewData.images = data.entries;
       }
       
     }

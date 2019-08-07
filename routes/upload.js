@@ -15,6 +15,7 @@ const
 
     , getStream = require('into-stream')
     , containerName = 'images'
+    , config = require('../config')
 ;
 
 const handleError = (err, res) => {
@@ -42,9 +43,7 @@ router.post('/', uploadStrategy, (req, res) => {
             return;
         }
 
-        res.render('success', { 
-            message: 'File uploaded to Azure Blob storage.' 
-        });
+        res.redirect('../detail/' + blobName);
     });
 });
 
