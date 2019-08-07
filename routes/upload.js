@@ -15,7 +15,6 @@ const
 
     , getStream = require('into-stream')
     , containerName = 'images'
-    , config = require('../config')
 ;
 
 const handleError = (err, res) => {
