@@ -2,8 +2,16 @@
 
 <a href="/">Return home to view all images</a>
 
-<h2>Image</h2>
-<img width="600px" src="https://{{accountName}}.blob.core.windows.net/{{containerName}}/{{image}}">
-
-<h2>Result</h2>
-<pre>{{result}}</pre>
+<br><br>
+<div style="width:1020px; display:table;">
+    <div style="width:600px; display:table-cell;">
+        Response:
+        <br><br>
+        <textarea style="width:580px; height:400px;">{{result}}</textarea>
+    </div>
+    <div id="imageDiv" style="width:420px; display:table-cell;">
+        Source image:
+        <br><br>
+        <img width="400" src="https://{{accountName}}.blob.core.windows.net/{{containerName}}/{{image}}" />
+    </div>
+</div>
